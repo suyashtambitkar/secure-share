@@ -1,8 +1,9 @@
+import Home from "./Components/Home";
 
 function App() {
   return (
-   <div className="bg-green-200">
-    hello
+   <div className="">
+    <Home/>
    </div>
   );
 }

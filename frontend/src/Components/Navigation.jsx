@@ -1,0 +1,18 @@
+import { IoLogoXing } from "react-icons/io5";
+
+const Navigation = () => {
+    return (
+        <div className='max-w-7xl mx-auto px-3 py-3 sm:px-6 lg:px-8 flex items-center justify-between'>
+            <div className='flex items-center gap-4'>
+                <IoLogoXing className='text-[48px] md:text-[50px] text-white'/>
+                <span className='hidden lg:flex font-semibold text-sm'>suyashtambitkar9@gmail.com</span>
+            </div>
+
+            <div>
+                <button className="border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm text-sm md:text-base px-4 py-1">About Us</button>
+            </div>
+        </div>
+    )
+}
+
+export default Navigation
