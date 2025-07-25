@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FiUpload } from "react-icons/fi";
 import { FiDownload } from "react-icons/fi";
 import Navigation from "./Navigation";
@@ -5,7 +6,7 @@ import Navigation from "./Navigation";
 const Home = () => {
   return (
     <div className="mt-2">
-      <Navigation/>
+      <Navigation />
       <div className="border-2 border-[#4b4d8f] rounded-sm  max-w-7xl mx-3 md:mx-auto flex justify-center px-4 py-6 mt-10 md:mt-12 md:py-24">
         <div>
           <div className="flex items-center gap-3">
@@ -17,8 +18,8 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-y-5 gap-x-5 py-14">
-            <button className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Send File <FiUpload /> </button>
-            <button className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </button>
+            <Link to={"/send"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Send File <FiUpload /> </Link>
+            <Link className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </Link>
           </div>
         </div>
 
