@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="mt-2">
       <Navigation />
-      <div className="border-2 border-[#4b4d8f] rounded-sm  max-w-7xl mx-3 md:mx-auto flex justify-center px-4 py-6 mt-10 md:mt-12 md:py-24">
+      <div className="border-2 border-[#4b4d8f] bg-[#4b4d8f23] rounded-sm  max-w-7xl mx-3 md:mx-auto flex justify-center px-4 py-6 mt-8 md:mt-12 md:py-24">
         <div>
           <div className="flex items-center gap-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#7f82f2]">Instant File Sharing — Simple, Fast & Secure</h2>
@@ -19,7 +19,7 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-y-5 gap-x-5 py-14">
             <Link to={"/send"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Send File <FiUpload /> </Link>
-            <Link className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </Link>
+            <Link to={"/receive"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </Link>
           </div>
         </div>
 
