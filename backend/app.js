@@ -3,7 +3,7 @@ const app = express();
 const http = require('http');
 const cors = require('cors');
 const PORT = 5000;
-const {Server} =require('socket.io');
+const { Server } = require('socket.io');
 
 const server = http.createServer(app);
 
@@ -11,17 +11,33 @@ app.use(express.json())
 app.use(cors());
 
 // Create a new Socket.IO server
-const io = new Server(server,{
-    cors:{
-        origin:'*',
-        methods:['Get','Post']
+const io = new Server(server, {
+    cors: {
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST']
     }
+});
+
+// Socket io logic
+io.on("connection", (socket) => {
+
+    // join room  point
+    socket.on("join_room", (roomId) => {
+        socket.join(roomId);
+        console.log(`room joined ${socket.id}`)
+    });
+
+    // Receiver file point
+    socket.on("send_file", ({ roomId, fileName, fileData }) => {
+        socket.to(roomId).emit("receive_file",{fileName,fileData});
+    });
+
 })
 
 app.get('/', (req, res) => {
     res.send('Backend is running!');
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
