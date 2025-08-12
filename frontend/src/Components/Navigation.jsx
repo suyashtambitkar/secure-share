@@ -11,7 +11,7 @@ const Navigation = () => {
 
             <div>
                 <Link to={"/about"}>
-                    <button className="border-2 border-[#6b6ed1] hover:border-[#6b6ed1] bg-[#6b6ed1] rounded-full text-sm md:text-base px-4 py-1">About Us</button>
+                    <button className="border-2 border-[#6b6ed1] hover:border-[#484b99] bg-[#6b6ed1] rounded-full text-sm md:text-base px-4 py-1">About Us</button>
                 </Link>
             </div>
         </div>

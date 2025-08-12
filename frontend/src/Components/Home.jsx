@@ -18,8 +18,8 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-y-5 gap-x-5 py-14">
-            <Link to={"/send"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Send File <FiUpload /> </Link>
-            <Link to={"/receive"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </Link>
+            <Link to={"/send"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] hover:bg-[#6b6ed1] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Send File <FiUpload /> </Link>
+            <Link to={"/receive"} className="w-52 md:w-1/3 border-2 border-[#6b6ed1] bg-[#2f304a] hover:bg-[#6b6ed1] rounded-sm flex items-center justify-center gap-x-3 text-sm md:text-base px-4 py-1">Receive File <FiDownload /> </Link>
           </div>
         </div>
 
