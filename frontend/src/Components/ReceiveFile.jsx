@@ -3,7 +3,7 @@ import { FaRegFileAlt } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io('https://secure-share-n62z.onrender.com');
+const socket = io(process.env.REACT_APP_API_URL);
 
 const ReceiveFile = () => {
     const [Files, setFiles] = useState([]);
