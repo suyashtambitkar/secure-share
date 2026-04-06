@@ -23,7 +23,6 @@ const SendFile = () => {
     const files = Array.from(e.target.files);
     setAllFiles(files);
     setFileStatus(false);
-    console.log(files);
   }
 
   // Create Room
