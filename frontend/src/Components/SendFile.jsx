@@ -10,6 +10,7 @@ const SendFile = () => {
   const [allFiles, setAllFiles] = useState([]);
   const [createPass, setCreatePassPass] = useState("");
   const [showPass, setShowPass] = useState("");
+  const [fileStatus,setFileStatus] = useState(false);
   const inputRef = useRef();
 
   // clicking to input using ref 
@@ -21,6 +22,7 @@ const SendFile = () => {
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files);
     setAllFiles(files);
+    setFileStatus(false);
     console.log(files);
   }
 
@@ -48,6 +50,10 @@ const SendFile = () => {
         socket.emit("send_file", { roomId: showPass, fileName: file.name, fileData: reader.result })
       }
     })
+
+    setAllFiles("");
+    setFileStatus(true);
+    
   }
   return (
     <div className="max-w-7xl mx-auto px-5">
@@ -61,14 +67,14 @@ const SendFile = () => {
             <button onClick={() => createRoom()} className="border-2 border-[#6b6ed1] hover:border-[#45478d] bg-[#6b6ed1] rounded-sm px-8 py-1 text-sm">Create</button>
           </div>
           {
-            showPass && (<p className="text-sm text-[#c9c9d2]">Password is {showPass}</p>)
+            showPass && (<p className="text-sm text-[#c9c9d2]">Password : {showPass}</p>)
           }
         </div>
 
         <div className=" flex items-center justify-center flex-col border-2 border-[#4b4d8f] bg-[#4b4d8f23] rounded-sm mt-8 px-4 py-5 md:py-5">
 
           <p className="text-sm text-[#b3b3ba] text-center">Send file after secound person connected</p>
-
+          
           <div className="flex justify-center items-center gap-5 mt-4">
 
             <input type="file" ref={inputRef} onChange={handleFileChange} multiple className="hidden" />
@@ -89,6 +95,9 @@ const SendFile = () => {
                 }
               </ul>
             </div>)
+          }
+          {
+            fileStatus && (<p className="my-5 text-sm text-[#30af5f]">Successfully Sent</p>)
           }
         </div>
       </div>

@@ -26,7 +26,6 @@ io.on("connection", (socket) => {
     // join room  point
     socket.on("join_room", (roomId) => {
         socket.join(roomId);
-        console.log(`room joined ${socket.id}`)
     });
 
     // Receiver file point
