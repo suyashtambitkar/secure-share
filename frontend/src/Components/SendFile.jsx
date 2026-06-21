@@ -72,7 +72,7 @@ const SendFile = () => {
 
         <div className=" flex items-center justify-center flex-col border-2 border-[#4b4d8f] bg-[#4b4d8f23] rounded-sm mt-8 px-4 py-5 md:py-5">
 
-          <p className="text-sm text-[#b3b3ba] text-center">Send file after secound person connected</p>
+          <p className="text-sm text-[#b3b3ba] text-center">Send file after second person connected</p>
           
           <div className="flex justify-center items-center gap-5 mt-4">
 
